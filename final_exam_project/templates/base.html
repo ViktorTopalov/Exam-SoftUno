@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Book Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin-right: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        #box {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <header>
+            <h1><a class="index-navigation" href="{% url 'index' %}"><span>Fantasy Book Store</span></a></h1>
+            <nav>
+                <a href="{% url 'profile_details' %}">Profile</a>
+                <!-- Add more navigation links as needed -->
+            </nav>
+        </header>
+        
+    </div>
+</body>
+</html>
+
+        {% block main_content %}
+        {% endblock %}
+
+        
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Book Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin-right: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        #box {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <header>
+            <h1><a class="index-navigation" href="{% url 'index' %}"><span>Fantasy Book Store</span></a></h1>
+            
+        </header>
+        
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Profile</title>
+    <!-- Add any additional CSS links or stylesheets here -->
+    <style>
+        /* Custom styles for the create profile form */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        #register-page {
+            text-align: center;
+            padding: 20px;
+        }
+        #register-form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            text-align: left;
+        }
+        .brand-logo {
+            width: 150px;
+            height: 150px;
+            background-size: cover;
+            margin: 0 auto 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .btn.submit {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn.submit:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <section id="register-page" class="content auth">
+        <form action="{% url 'create_profile' %}" method="post" id="register-form">
+            {% csrf_token %}
+            <div class="container">
+                <div class="brand-logo"></div>
+                <h1>Create Profile</h1>
+                {{ form }}
+                <!-- Display form fields using default Django rendering -->
+                <input class="btn submit" type="submit" value="Create Profile" />
+            </div>
+        </form>
+    </section>
+</body>
+</html>
+    
+
+        
+    </div>
+  </body>
+</html>
+

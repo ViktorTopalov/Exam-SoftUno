@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block main_content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <!-- Add any additional CSS links or stylesheets here -->
+    <style>
+        /* Custom styles for the edit profile form */
+        #register-page {
+            text-align: center;
+            padding: 20px;
+        }
+        #register {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            text-align: left;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <section id="register-page" class="content auth">
+        <form method="post" action="{% url 'edit_profile' %}" >
+            {% csrf_token %}
+            <div class="container">
+                <h1>Edit Profile</h1>
+                {{ form}}
+                <!-- Display form fields using paragraphs -->
+                <input class="btn" type="submit" value="Save Changes" />
+            </div>
+        </form>
+    </section>
+</body>
+</html>
+
+
+{% endblock %}
